@@ -10,3 +10,4 @@ services:
         target: /root/.devpi/server
     ports:
       - "3141:3141"
+    restart: unless-stopped
