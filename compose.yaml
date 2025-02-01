@@ -1,0 +1,12 @@
+services:
+  devpi-server:
+    container_name: devpi-server
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - type: bind
+        source: ./data
+        target: /root/.devpi/server
+    ports:
+      - "3141:3141"
