@@ -5,5 +5,5 @@ RUN python -m pip install --upgrade pip
 RUN pip install -q -U devpi-server
 COPY start-devpi.sh /root/
 WORKDIR /root/
+EXPOSE 3141
 ENTRYPOINT ["bash", "start-devpi.sh"]
-
